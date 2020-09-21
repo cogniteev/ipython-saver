@@ -11,3 +11,7 @@ Just launch this command, adding or not those optional arguments:
 
 After your session ends, it will be stored in `gs://$GCP_PROJECT_IPYTHON/ipython/<storing-directory>`, and you can then freely reimport it another time.
 
+You can fetch scripts from GCS by simply typing this command:
+```bash
+./fetch.sh
+```
