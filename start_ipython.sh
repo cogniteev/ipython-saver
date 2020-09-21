@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+
+gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
+gsutil -m cp -r gs://$GCP_PROJECT/ipython/ sessions
+
 python main.py $@
-git add sessions
-git commit -m "`date`"
-git pull -X theirs origin master
-git push origin master
+gsutil -m cp -r sessions gs://$GCP_PROJECT/ipython
+

@@ -14,7 +14,7 @@ def main(args):
 
     dir_path = 'sessions/{}'.format(args.name) if args.name else 'sessions/common'
     if not os.path.isdir(dir_path):
-        os.mkdir(dir_path)
+        os.makedirs(dir_path)
 
     logfile_name = '{}/{}.py'.format(dir_path, datetime.utcnow().strftime('%H_%M_%d_%m_%Y'))
 
