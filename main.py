@@ -30,7 +30,7 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Turn existing APICommands into selriz tasks')
+    parser = argparse.ArgumentParser(description='Starts an autosaving IPython session')
     parser.add_argument(
         "-n", "--name",
         type=str,
