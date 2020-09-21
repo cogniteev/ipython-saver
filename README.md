@@ -15,3 +15,8 @@ You can fetch scripts from GCS by simply typing this command:
 ```bash
 ./fetch.sh
 ```
+
+If you've renamed, added or deleted scripts from `ipython/` and want to update the bucket, use this command:
+```bash
+./push.sh
+``` 
