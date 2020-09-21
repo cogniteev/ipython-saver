@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS
-gsutil -m cp -r gs://$GCP_PROJECT/ipython/ sessions
+gsutil -m cp -r gs://$GCP_PROJECT/ipython/ ipython
 
 python main.py $@
-gsutil -m cp -r sessions gs://$GCP_PROJECT/ipython
+gsutil -m cp -r ipython gs://$GCP_PROJECT/ipython
 

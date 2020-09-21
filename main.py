@@ -12,7 +12,7 @@ def main(args):
     if args.script:
         c.InteractiveShellApp.exec_files = [args.script]
 
-    dir_path = 'sessions/{}'.format(args.name) if args.name else 'sessions/common'
+    dir_path = 'ipython/{}'.format(args.name if args.name else 'common')
     if not os.path.isdir(dir_path):
         os.makedirs(dir_path)
 
