@@ -10,7 +10,7 @@ def main(args):
     c = Config()
 
     if args.script:
-        c.InteractiveShellApp.exec_files = [args.script]
+        c.InteractiveShellApp.exec_files = ['ipython/{}'.format(args.script)]
 
     dir_path = 'ipython/{}'.format(args.name if args.name else 'common')
     if not os.path.isdir(dir_path):
